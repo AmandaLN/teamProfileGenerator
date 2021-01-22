@@ -186,7 +186,7 @@ function appMenu(){
         inquirer.prompt([
             {
                 type:"input",
-                name:"internsName",
+                name:"internName",
                 message:"What is your intern’s name?"
                 
             },
