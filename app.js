@@ -4,7 +4,8 @@ const Intern = require("./lib/Intern");
 const inquirer = require("inquirer");
 const path = require("path");
 const fs = require("fs");
-const validator = require('email-validator');
+// const validator = require('email-validator');
+// const IDValidators = require('id-number-validator');
 
 const OUTPUT_DIR = path.resolve(__dirname, "output");
 const outputPath = path.join(OUTPUT_DIR, "team.html");
@@ -32,8 +33,20 @@ function appMenu(){
             {
                 type:"input",
                 name:"managerId",
-                message:"What is your manager’s id?"
+                message:"What is your manager’s id?",
                 //Validate user input
+                validate: function(id)
+                {
+                    valid = /^[0-9]/.test(id);
+                    if (valid) {
+                        return true;
+                    }
+                    else{
+                        console.log("\nEnter valid Id");
+                        
+                        return false;
+                    }
+                }
             },
             {
                 type:"input",
@@ -56,8 +69,20 @@ function appMenu(){
             {
                 type:"input",
                 name:"managerOfficeNum",
-                message: "What is your manager’s office number?"
+                message: "What is your manager’s office number?",
                 //Validate user input
+                validate: function(number)
+                {
+                    valid = /^[0-9]/.test(number);
+                    if (valid) {
+                        return true;
+                    }
+                    else{
+                        console.log("\nEnter valid Id");
+                        
+                        return false;
+                    }
+                }
             },
             {
                 type:"list",
@@ -94,8 +119,21 @@ function appMenu(){
             {
                 type:"input",
                 name:"engineerId",
-                message:"What is your engineer’s id"
+                message:"What is your engineer’s id",
                 //Validate user input
+                validate: function(id)
+                {
+                    valid = /^[0-9]/.test(id);
+                    if (valid) {
+                        return true;
+                    }
+                    else{
+                        console.log("\nEnter valid Id");
+                        
+                        return false;
+                    }
+                }
+                
             },
             {
                 type:"input",
@@ -155,8 +193,20 @@ function appMenu(){
             {
                 type:"input",
                 name:"internId",
-                message:"What is your intern’s id"
+                message:"What is your intern’s id",
                 //Validate user input
+                validate: function(id)
+                {
+                    valid = /^[0-9]/.test(id);
+                    if (valid) {
+                        return true;
+                    }
+                    else{
+                        console.log("\nEnter valid Id");
+                        
+                        return false;
+                    }
+                }
             },
             {
                 type:"input",

@@ -22,6 +22,7 @@
   "homepage": "https://github.com/stevetrilogy/unit10hw#readme",
   "dependencies": {
     "email-validator": "^2.0.4",
+    "id-number-validator": "0.0.9",
     "inquirer": "^6.5.2"
   },
   "devDependencies": {
