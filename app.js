@@ -78,7 +78,7 @@ function appMenu(){
                         return true;
                     }
                     else{
-                        console.log("\nEnter valid Id");
+                        console.log("\nEnter valid office number");
                         
                         return false;
                     }
